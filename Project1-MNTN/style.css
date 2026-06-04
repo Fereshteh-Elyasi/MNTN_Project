@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;700&display=swap");
+
+:root {
+  --bg-dark: #0b1d26;
+  --accent: #FBD784;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--white);
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* --- NAVIGATION --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+}
+
+
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 1200px;
+  overflow: hidden;
+}
+
+/* همه عکس‌ها */
+.hero>img {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+   object-fit: cover;
+  pointer-events: none; 
+}
+
+/* ترتیب لایه‌ها */
+
+.effect {
+position: absolute;
+width: 100%;
+height: 1500px;
+top: 0px;
+  z-index: 3;
+}
+
+.layer-bg {
+z-index: 2;
+position: absolute;
+width: 1920px;
+height: 1513px;
+top: -400px;
+background: url(./assets/images/HG.png);
+
+}
+
+.layer-mid {
+z-index: 3;
+bottom: -100px;
+position: absolute;
+width: 1920px;
+height: 1422px;
+left: 0px;
+top: 320px;
+background: url(./assets/images/mountain.png);
+}
+
+.layer-front {
+  z-index: 4;
+position: absolute;
+width: 1920px;
+height: 926px;
+left: 0px;
+top: 768px;
+background: url(./assets/images/plain.png);
+}
+
+
+/* متن وسط */
+.hero-content{
+ position: absolute;
+  top: 240px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  z-index: 10;
+  width: 100%;
+
+  
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+/* gap: 32px; */
+
+position: absolute;
+width: 950px;
+height: 310px;
+/* left: 800px; */
+top: 300px;
+
+ margin: 25px -2px;
+
+}
+
+
+.gradient-top{
+position: absolute;
+width: 1920px;
+height: 1200px;
+left: 0px;
+top: 0px;
+background: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0B1D26 108.93%);
+z-index: 3; 
+}  
+
+.gradient-bottom{
+width: 1920px;
+height: 700px;
+top: 0;
+background: linear-gradient(to top, #0b1d26, transparent);
+  /* z-index: 4; */
+}      
+
+/* تیتر */
+.hero-content>h1{
+  font-family: "Playfair Display", serif;
+  font-size: 64px;
+  font-weight: 200;
+  line-height: 1.1;
+  max-width: 900px;
+  margin: 0px auto;
+  /* gap:10px; */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 32px;
+}
+h1.first{
+  margin-left:156px ;
+}
+.scroll-btn{
+  margin: 33px 157px;
+}
+/* گرادینت پایین */
+.hero::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(to bottom, transparent, #0b1d26);
+  z-index: 5;
+
+}
+
+div.degree>img{
+  width: 200px;
+  z-index:20;
+position: absolute;
+top:-13px;
+right:-240px;
+filter: drop-shadow(0px 0px 100px rgba(0, 0, 0, 0.2));
+}
+
+/* --- MAIN CONTENT --- */
+.container{
+  max-width: 1200px;
+    width: 1462px;
+  height: 3040px;
+  margin: -100px auto ;
+  position: relative;
+  z-index: 20;
+  padding: 0 20px;
+}
+
+.content-row{
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  margin-bottom: 200px;
+}
+
+.content-row.reverse{
+  flex-direction: row-reverse;
+}
+
+.text-side{
+ flex: 10;
+  position: relative;
+  font-weight: bold;
+}
+.text-side>h2{
+font-family: Chronicle Display;
+font-weight: 600;
+font-size: 64px;
+leading-trim: none;
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+.image-side{
+  width: 566px;
+  height: 720px;
+}
+
+.image-side>img {
+  width: 100%;
+  max-width: 560px;
+  height: 720px;
+  object-fit: cover;
+}
+
+.bg-number{
+  position: absolute;
+  font-size: 170px !important;
+  font-weight: 700;
+  opacity: 0.1;
+  line-height: 240px; 
+  top: -110px !important;
+  left: -90px !important;
+  color: #FFFFFF;
+  z-index: -1;
+}
+
+.tagline{
+  display: flex;
+  align-items: center;
+  color: var(--accent);
+  letter-spacing: 4px;
+  font-weight: 700;
+  margin-left: 100px;
+}
+.line{
+  width: 60px;
+  height: 2px;
+  background: var(--accent);
+  margin-right: 30px;
+}
+
+h2{
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+  margin: 4px 0;
+}
+.read-more {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/*FOOTER*/
+.footer {
+  padding: 0px 300px;
+  background-color: var(--bg-dark);
+  margin-bottom: 70px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 3fr 3fr;
+  gap: 180px;
+}
+.footer-links {
+  display: flex;
+  gap: 200px;
+}
+.link-col>h4 {
+  color: var(--accent);
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+.link-col>a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 12px;
+  opacity: 0.8;
+  font-size: 18px;
+}
+.footer-brand>p.des {
+  margin: 30px 0 100px;
+  max-width: 300px;
+  font-weight: 700;
+  font-size: 14;
+  display: inline-flex;
+}
+.copyright{
+  opacity: 50%;
+ font-size: 20px;
+ flex-wrap: nowrap;
+}
+
+
+.side-social {
+  position: absolute;
+  left: 60px;
+  top: 40%;
+font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  z-index: 20;
+}
+
+
+.follow-text {
+  writing-mode: vertical-lr;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* آیکون‌ها */
+.icon {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+
+.account{
+  color: white !important;
+ font-weight: bold;
+}
